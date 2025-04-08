@@ -1,0 +1,7 @@
+selenium-wire
+python-dotenv
+requests
+openpyxl
+google-generativeai
+pillow
+blinker==1.6.2

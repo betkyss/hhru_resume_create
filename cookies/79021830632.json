@@ -1,0 +1,334 @@
+[
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689186,
+    "httpOnly": false,
+    "name": "gsscgib-w-hh",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1GC0Yn7y1YkGrfs4tZVy232m/XsL57dtrhtwiyIxJkibDRHUS9obVstLLE1HpcI9gets5+Z+YrYNoW9gwD8QfQZKQHNNaDLYD1/M4XNQWXK/eE7PgdQCFOle9f6qo5GRDYMem6GvU2TfzOuOsnqfixiejWsZCDsBlBnI8caLgKoTv2Z45REysdYbKxa/Xk13ccgGseuIozv5kjXFomM2r+vJco2R4Z/aCuLISjyuXlEPiPLqRkHG9cGfzTojozIzFwvIe5aVulvit08Iuk1TiRg="
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689184,
+    "httpOnly": false,
+    "name": "cfidsgib-w-hh",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "4jJCqw4dsZ9WMBKFqNMrBCo/TfJjUeMerZfrKRbbourKYUkA1rVLUnPT3eUPThX6077EhtKtRU/VfDxoXYKT7k0Q4SHTSuk9jgnZ9IksKyJbGLWr38wSDW97T3u+fWlZi4TRXUf9hojCngXN9qQnYy8IhDgVLP2EnglBfw=="
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1774689184,
+    "httpOnly": false,
+    "name": "cfidsgib-w-hh",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "4jJCqw4dsZ9WMBKFqNMrBCo/TfJjUeMerZfrKRbbourKYUkA1rVLUnPT3eUPThX6077EhtKtRU/VfDxoXYKT7k0Q4SHTSuk9jgnZ9IksKyJbGLWr38wSDW97T3u+fWlZi4TRXUf9hojCngXN9qQnYy8IhDgVLP2EnglBfw=="
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1743154384,
+    "httpOnly": false,
+    "name": "__ddg8_",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "ouLej8Ryoz2qQCqv"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689180,
+    "httpOnly": false,
+    "name": "__zzatgib-w-hh",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "MDA0dC0jViV+FmELHw4/aQsbSl1pCENQGC9LX3MvcCEmG0dgKEhdT34uSxl3cyZQOkAVPkJ2eitCbSBmOVURCxIXRF5cVWl1FRpLSiVueCplJS0xViR8SylEXFF8Jh4UeHMjVQgNVy8NPjteLW8PKhMjZHYhP04hC00+KlwVNk0mbjN3RhsJHlksfEspNRBTflkfFX0pWFQ4EBdzRXR3LG4gH2V6FSJ4Xk98JhwZfmwnDBBAYj0zaWVpcC9gIBIlEU1HGEVkW0I2KBVLcU8cenZffSpCaSBgTFwgS1VTeiYVe0M8YwxxFU11cjgzGxBhDyMOGFgJDA0yaFF7CT4VHThHKHIzd2UqQmsmZlBdH0hHSWtlTlNCLGYbcRVNCA00PVpyIg9bOSVYCBI/CyYgFXpsKFIIE1tDQm5vG382XRw5YxEOIRdGWF17TEA=PczBsg=="
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1774689184,
+    "httpOnly": false,
+    "name": "gsscgib-w-hh",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1GC0Yn7y1YkGrfs4tZVy232m/XsL57dtrhtwiyIxJkibDRHUS9obVstLLE1HpcI9gets5+Z+YrYNoW9gwD8QfQZKQHNNaDLYD1/M4XNQWXK/eE7PgdQCFOle9f6qo5GRDYMem6GvU2TfzOuOsnqfixiejWsZCDsBlBnI8caLgKoTv2Z45REysdYbKxa/Xk13ccgGseuIozv5kjXFomM2r+vJco2R4Z/aCuLISjyuXlEPiPLqRkHG9cGfzTojozIzFwvIe5aVulvit08Iuk1TiRg="
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1744362780,
+    "httpOnly": false,
+    "name": "device_magritte_breakpoint",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "l"
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1777713177,
+    "httpOnly": false,
+    "name": "uxs_uid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "d6d0c3b0-0bb4-11f0-84fb-3bf3d96c5bc2"
+  },
+  {
+    "domain": "hh.ru",
+    "httpOnly": false,
+    "name": "_hi",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "176979405"
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1743757918,
+    "httpOnly": false,
+    "name": "domain_sid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "5R8kAx5AYtmTzxWbj2m3t%3A1743153118691"
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1744362780,
+    "httpOnly": false,
+    "name": "device_breakpoint",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "l"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1743154980,
+    "httpOnly": false,
+    "name": "_ym_visorc",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "w"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1777713117,
+    "httpOnly": false,
+    "name": "iap.uid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "3fa5e528f98241f18b9d12f82e99a708"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689117,
+    "httpOnly": false,
+    "name": "_ym_d",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1743153117"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1771924379,
+    "httpOnly": false,
+    "name": "tmr_lvidTS",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1743153117169"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1771924379,
+    "httpOnly": false,
+    "name": "tmr_lvid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "814fde531720f3ae3d29042cd24754a5"
+  },
+  {
+    "domain": ".hh.ru",
+    "httpOnly": false,
+    "name": "crypted_hhuid",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "C6604B2703FBEC08F4FEACEEC5F75D3EAF1745EEEF3B08FA1E9730264B5372B3"
+  },
+  {
+    "domain": ".hh.ru",
+    "httpOnly": false,
+    "name": "_xsrf",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "bf65d913168b5791d4584f37f3fe777b"
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1743239582,
+    "httpOnly": false,
+    "name": "tmr_detect",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "0%7C1743153182726"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689116,
+    "httpOnly": true,
+    "name": "__ddg1_",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "GGX0C1K31Ja9kOWnFnSJ"
+  },
+  {
+    "domain": ".hh.ru",
+    "httpOnly": false,
+    "name": "crypted_id",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "78123BF47A4D93848F31EFB11737342AA5471C6F722104504734B32F0D03E9F8"
+  },
+  {
+    "domain": "hh.ru",
+    "httpOnly": false,
+    "name": "GMT",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "3"
+  },
+  {
+    "domain": "hh.ru",
+    "expiry": 1774689116,
+    "httpOnly": false,
+    "name": "regions",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1743154384,
+    "httpOnly": false,
+    "name": "__ddg10_",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "1743163984"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1777713184,
+    "httpOnly": false,
+    "name": "hhuid",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "YOoOiPFN2QgC0Wfmkgwy0A--"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689186,
+    "httpOnly": false,
+    "name": "fgsscgib-w-hh",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "SNfB08183da2d80f8834960e82c2b9854e4b4b96"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1777713180,
+    "httpOnly": true,
+    "name": "hhul",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": true,
+    "value": "541799515176d00dda35f5eef7089edd7674a551083b402fee3800ba58e0bd64"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689116,
+    "httpOnly": false,
+    "name": "region_clarified",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "NOT_SET"
+  },
+  {
+    "domain": ".hh.ru",
+    "httpOnly": false,
+    "name": "hhrole",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "applicant"
+  },
+  {
+    "domain": ".hh.ru",
+    "httpOnly": true,
+    "name": "hhtoken",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "kJK5FxzNG7MEIHdHGh0MBIZnv9fp"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1743225117,
+    "httpOnly": false,
+    "name": "_ym_isad",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "2"
+  },
+  {
+    "domain": "hh.ru",
+    "httpOnly": false,
+    "name": "display",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "desktop"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1774689117,
+    "httpOnly": false,
+    "name": "_ym_uid",
+    "path": "/",
+    "sameSite": "None",
+    "secure": true,
+    "value": "1743153117309287533"
+  },
+  {
+    "domain": ".hh.ru",
+    "expiry": 1743154384,
+    "httpOnly": false,
+    "name": "__ddg9_",
+    "path": "/",
+    "sameSite": "Lax",
+    "secure": false,
+    "value": "194.226.233.125"
+  }
+]
