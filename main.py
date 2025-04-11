@@ -3,6 +3,8 @@ import json
 import register
 import resume
 import settings
+import subprocess
+import time
 
 
 def choose_template(folder="templates"):
@@ -19,23 +21,39 @@ def choose_template(folder="templates"):
         return None
     return os.path.join(folder, templates[int(choice)-1])
 
+
 def choose_proxy(proxy_file="proxies.txt"):
     if not os.path.exists(proxy_file):
         print("Файл прокси не найден:", proxy_file)
         return None
-    with open(proxy_file, "r") as f:
+
+    with open(proxy_file, "r", encoding="utf-8") as f:
         proxies = [line.strip() for line in f if line.strip()]
+
     if not proxies:
         print("Нет доступных прокси в файле:", proxy_file)
         return None
-    print("Доступные прокси:")
-    for idx, proxy in enumerate(proxies, start=1):
-        print(f"- {idx}: {proxy}")
-    choice = input("Введите номер прокси: ").strip()
-    if not choice.isdigit() or int(choice) < 1 or int(choice) > len(proxies):
-        print("Неверный выбор прокси.")
+
+    print("Выберите прокси:")
+    for i, p in enumerate(proxies, 1):
+        print(f"{i}. {p}")
+
+    index = int(input("Введите номер: ")) - 1
+    if index < 0 or index >= len(proxies):
+        print("Неверный номер.")
         return None
-    return proxies[int(choice)-1]
+
+    ip, port, user, pwd = proxies[index].split(":")
+
+    args = ["node", "proxy-server.js", ip, port, user, pwd]
+    print(f"\n🚀 Запуск локального прокси через: {ip}:{port}")
+    proxy_proc = subprocess.Popen(args)
+    time.sleep(2)  # ждём пока поднимется
+
+    print("Локальный прокси запущен на 127.0.0.1:8899")
+    
+    # Возвращаем сам прокси-строку и процесс, чтобы можно было использовать и завершить
+    return f"{ip}:{port}:{user}:{pwd}", proxy_proc
 
 def main():
     template = choose_template()
@@ -45,9 +63,10 @@ def main():
     if proxy is None:
         return
 
-    cookies = register.main(proxy_arg=proxy)
-    resume.main(proxy_arg=proxy, template_arg=template, cookies_arg=cookies)
-    settings.main(proxy_arg=proxy, cookies_arg=cookies, template_arg=template) 
+    cookies = register.main()
+    # cookies = './cookies/79021830632.json'
+    resume.main(template_arg=template, cookies_arg=cookies)
+    settings.main(cookies_arg=cookies, template_arg=template) 
     
 if __name__ == "__main__":
     main()

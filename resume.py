@@ -7,7 +7,7 @@ import zipfile
 import argparse
 import requests
 from openpyxl import load_workbook
-from seleniumwire import webdriver
+from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -25,9 +25,6 @@ def scroll_to_center(driver, element):
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--template", help="Путь к Excel шаблону", required=True)
-    parser.add_argument(
-        "--proxy", help="Прокси в формате host:port:user:pass", required=True
-    )
     parser.add_argument("--cookies", help="Путь к файлу с куки", required=True)
     return parser.parse_args()
 
@@ -650,23 +647,14 @@ def wait_for_h1_title(driver, expected_text, retries=3, delay=1):
     return False
 
 
-def create_driver_with_proxy(proxy_arg):
-    proxy_host, proxy_port, proxy_user, proxy_pass = proxy_arg.split(":")
-    seleniumwire_options = {
-        'proxy': {
-            'http': f'http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}',
-            'https': f'http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}',
-            'no_proxy': 'localhost,127.0.0.1'
-        },
-        'verify_ssl': False,         # Отключаем проверку SSL сертификатов
-        'disable_capture': True,     # Отключаем перехват HTTPS-трафика (и генерацию своего сертификата)
-        'connection_interceptor': False,
-        'enable_har': False,
-        'disable_encoding': True,
-    }
+def create_driver_with_local_proxy():
+    from selenium.webdriver.chrome.options import Options
+
     chrome_options = Options()
-    chrome_options.add_argument("--ignore-certificate-errors")  # на всякий случай
-    driver = webdriver.Chrome(seleniumwire_options=seleniumwire_options, options=chrome_options)
+    chrome_options.add_argument("--ignore-certificate-errors")
+    chrome_options.add_argument("--proxy-server=http://127.0.0.1:8899")
+
+    driver = webdriver.Chrome(options=chrome_options)
     return driver
 
 
@@ -699,10 +687,9 @@ def load_cookies(driver, cookies_file):
 # Дополните файл следующим образом:
 
 
-def main(proxy_arg=None, template_arg=None, cookies_arg=None):
-    if proxy_arg is None or template_arg is None or cookies_arg is None:
+def main(template_arg=None, cookies_arg=None):
+    if template_arg is None or cookies_arg is None:
         args = parse_args()
-        proxy_arg = args.proxy
         template_arg = args.template
         cookies_arg = args.cookies
 
@@ -713,7 +700,7 @@ def main(proxy_arg=None, template_arg=None, cookies_arg=None):
     extractor = DataExtractor(template_arg, sheet_name)
     data = extractor.extract_data()
 
-    driver = create_driver_with_proxy(proxy_arg)
+    driver = create_driver_with_local_proxy()
     load_cookies(driver, cookies_arg)
 
     filler = ResumeFiller(driver)
