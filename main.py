@@ -64,9 +64,9 @@ def main():
         return
 
     cookies = register.main()
-    # cookies = './cookies/79021830632.json'
+    # cookies = './cookies/79805637571.json'
     resume.main(template_arg=template, cookies_arg=cookies)
-    settings.main(cookies_arg=cookies, template_arg=template) 
+    # settings.main(cookies_arg=cookies, template_arg=template) 
     
 if __name__ == "__main__":
     main()
