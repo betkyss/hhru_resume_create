@@ -1,27 +1,43 @@
+# run-proxy.py
 import subprocess
-import time
+import sys
 
-# 1. Читаем прокси
-with open("proxies.txt", "r", encoding="utf-8") as f:
-    proxies = [line.strip() for line in f if line.strip()]
+def main():
+    try:
+        with open("proxies.txt", "r", encoding="utf-8") as f:
+            proxies = [line.strip() for line in f if line.strip()]
+    except FileNotFoundError:
+        print("Файл proxies.txt не найден")
+        sys.exit(1)
 
-# 2. Выбор прокси
-print("Выберите прокси:")
-for i, p in enumerate(proxies, 1):
-    print(f"{i}. {p}")
-index = int(input("Введите номер: ")) - 1
+    if not proxies:
+        print("Список прокси пуст")
+        sys.exit(1)
 
-ip, port, user, pwd = proxies[index].split(":")
+    print("Выберите прокси:")
+    for i, p in enumerate(proxies, 1):
+        print(f"{i}. {p}")
+    try:
+        idx = int(input("Введите номер: ")) - 1
+        ip, port, user, pwd = proxies[idx].split(":")
+    except (ValueError, IndexError):
+        print("Неверный выбор")
+        sys.exit(1)
 
-# 3. Запуск proxy-server.js с аргументами
-args = ["node", "proxy-server.js", ip, port, user, pwd]
-print(f"\n🚀 Запуск локального прокси через: {ip}:{port}")
-proxy_proc = subprocess.Popen(args)
+    args = ["node", "proxy-server.js", ip, port, user, pwd]
+    print(f"\nЗапускаем локальный прокси через {ip}:{port} …")
+    try:
+        proc = subprocess.Popen(args)
+    except FileNotFoundError:
+        print("Не удалось запустить node. Убедитесь, что Node.js установлена и доступна в PATH.")
+        sys.exit(1)
 
-# 4. Ждём и даём поработать
-print("Локальный прокси запущен на 127.0.0.1:8899")
-print("Нажмите Enter, чтобы остановить...")
-input()
+    print("Локальный прокси запущен на 127.0.0.1:8899")
+    input("Нажмите Enter для остановки…")
+    proc.terminate()
+    proc.wait()
+    print("Прокси остановлен")
 
-proxy_proc.terminate()
+if __name__ == "__main__":
+    main()
 
