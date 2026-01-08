@@ -72,7 +72,6 @@ class DataExtractor:
         return data
 
 
-
 class ResumeFiller:
     def __init__(self, driver):
         self.driver = driver
@@ -362,6 +361,7 @@ class ResumeFiller:
             print("Ошибка при нажатии кнопки 'primary-actions':", e)
             return
 
+
     def fill_resume(self, data):
         self.driver.get("https://hh.ru/profile/resume/professional_role")
         try:
@@ -435,8 +435,25 @@ class ResumeFiller:
         except Exception as e:
             print("Ошибка при первом клике по финальной кнопке:", e)
             return
+
         if not wait_for_h1_title(self.driver, "Заполните основную информацию"):
             return
+
+        try:
+            gender_label = self.wait.until(
+                EC.element_to_be_clickable((
+                    By.XPATH,
+                    "//div[@data-qa='fields-group-helper-container']"
+                    "//label[input[@value='male' or contains(@data-qa, '-male-')]][1]"
+                ))
+            )
+            scroll_to_center(self.driver, gender_label)
+            gender_label.click()
+            time.sleep(0.2)
+        except Exception as e:
+            print("Ошибка при выборе пола:", e)
+            return
+
         try:
             final_button = self.wait.until(
                 EC.element_to_be_clickable((
