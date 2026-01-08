@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Local secrets / runtime data
+.env
+proxies.txt
+captcha.png
+
+cookies/*.json
+users/*.txt
+templates/*.xlsx
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
