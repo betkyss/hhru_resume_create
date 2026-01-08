@@ -63,8 +63,8 @@ def main():
     if proxy is None:
         return
 
-    # cookies = register.main()
-    cookies = './cookies/79805637571.json'
+    cookies = register.main()
+    # cookies = './cookies/79010800438.json'
     resume.main(template_arg=template, cookies_arg=cookies)
     # settings.main(cookies_arg=cookies, template_arg=template) 
     
